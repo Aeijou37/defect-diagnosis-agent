@@ -1,0 +1,103 @@
+{
+  "defect_types": {
+    "crazing": {
+      "name_en": "Crazing",
+      "name_zh": "裂纹",
+      "code": "Cr",
+      "morphology": "表面呈现不规则网状或龟裂状细纹，分布在钢材表面较大区域",
+      "typical_location": "钢板表面，呈区域性分布",
+      "possible_causes": "轧制过程中温度应力或冷却不均导致表面裂纹",
+      "severity_criteria": {
+        "1": "极少量细纹，面积占比<5%",
+        "2": "少量细纹，面积占比5-15%",
+        "3": "中等密度裂纹，面积占比15-30%",
+        "4": "密集裂纹，面积占比30-50%",
+        "5": "严重龟裂，面积占比>50%"
+      },
+      "general_suggestion": "轻微裂纹可打磨处理后继续使用，严重裂纹需判废或返修"
+    },
+    "inclusion": {
+      "name_en": "Inclusion",
+      "name_zh": "夹杂",
+      "code": "In",
+      "morphology": "呈点状、条状或不规则暗斑，与基体有明显色差",
+      "typical_location": "钢板表面或内部，随机分布",
+      "possible_causes": "冶炼过程中非金属夹杂物未充分去除，轧制后暴露于表面",
+      "severity_criteria": {
+        "1": "单个微小夹杂，直径<1mm",
+        "2": "少量小夹杂，直径1-3mm",
+        "3": "多个夹杂或单个较大夹杂，直径3-5mm",
+        "4": "密集夹杂或条状夹杂，影响面积较大",
+        "5": "大面积夹杂，严重影响材料性能"
+      },
+      "general_suggestion": "小夹杂可保留，大夹杂需切除或判废，建议改进冶炼工艺"
+    },
+    "patches": {
+      "name_en": "Patches",
+      "name_zh": "斑块",
+      "code": "Pa",
+      "morphology": "不规则片状色差区域，边界较模糊，面积较大",
+      "typical_location": "钢板表面，呈片状分布",
+      "possible_causes": "轧制过程中氧化铁皮压入或温度不均导致表面色差",
+      "severity_criteria": {
+        "1": "小面积斑块，面积占比<5%",
+        "2": "少量斑块，面积占比5-10%",
+        "3": "中等面积斑块，面积占比10-25%",
+        "4": "大面积斑块，面积占比25-40%",
+        "5": "大面积严重斑块，面积占比>40%"
+      },
+      "general_suggestion": "轻微斑块可打磨处理，严重斑块需判废或降级使用"
+    },
+    "pitted_surface": {
+      "name_en": "Pitted Surface",
+      "name_zh": "麻点",
+      "code": "PS",
+      "morphology": "表面密集分布的小凹坑或孔洞，呈点状密集排列",
+      "typical_location": "钢板表面局部区域",
+      "possible_causes": "氧化铁皮剥落、酸洗过度或轧辊表面磨损导致",
+      "severity_criteria": {
+        "1": "少量稀疏麻点",
+        "2": "少量密集麻点，区域较小",
+        "3": "中等密度麻点，区域适中",
+        "4": "密集麻点，区域较大",
+        "5": "严重麻点，大面积密集分布"
+      },
+      "general_suggestion": "轻微麻点可保留，严重麻点需打磨或判废，建议检查轧辊状态"
+    },
+    "rolled-in_scale": {
+      "name_en": "Rolled-in Scale",
+      "name_zh": "轧入氧化皮",
+      "code": "RS",
+      "morphology": "暗色条带或不规则区域，沿轧制方向延伸，颜色较深",
+      "typical_location": "沿轧制方向分布",
+      "possible_causes": "轧制过程中氧化铁皮被压入钢板表面",
+      "severity_criteria": {
+        "1": "短小细条，长度<10mm",
+        "2": "少量条带，长度10-30mm",
+        "3": "多条条带，长度30-50mm",
+        "4": "长条带或密集分布，影响较大",
+        "5": "大面积轧入，严重影响表面质量"
+      },
+      "general_suggestion": "轻微可打磨去除，严重需判废，建议优化除鳞工艺"
+    },
+    "scratches": {
+      "name_en": "Scratches",
+      "name_zh": "划痕",
+      "code": "Sc",
+      "morphology": "线性沟槽或划伤痕迹，方向较一致，长度不等",
+      "typical_location": "钢板表面，方向通常与轧制或搬运方向一致",
+      "possible_causes": "轧制、搬运或加工过程中机械擦伤",
+      "severity_criteria": {
+        "1": "浅细划痕，长度<20mm",
+        "2": "少量划痕，长度20-50mm",
+        "3": "多条划痕，长度50-100mm",
+        "4": "深长划痕，影响面积大",
+        "5": "严重划伤，深度大或大面积分布"
+      },
+      "general_suggestion": "浅划痕可打磨处理，深划痕需判废或返修，建议检查搬运设备"
+    }
+  },
+  "valid_types": ["crazing", "inclusion", "patches", "pitted_surface", "rolled-in_scale", "scratches"],
+  "valid_severity": [1, 2, 3, 4, 5],
+  "report_fields": ["defect_type", "location", "morphology", "severity", "cause", "suggestion"]
+}
